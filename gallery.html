@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Vision Academy campus, classes, projects, and events.">
+  <title>Gallery | Vision Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <nav class="container navbar" aria-label="Main navigation">
+      <a class="logo" href="index.html" aria-label="Vision Academy home">
+        <span class="logo-mark"><i class="fa-solid fa-shield-halved"></i></span>
+        <span class="logo-text">Vision Academy<small>Computer Education</small></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-menu" id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About Us</a>
+        <a href="index.html#courses">Courses</a>
+        <a class="active" href="gallery.html">Gallery</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <a class="btn btn-gold nav-cta" href="index.html#contact">Enquiry Now</a>
+    </nav>
+  </header>
+
+  <main class="gallery-page">
+    <section class="section gallery">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Gallery</span>
+          <h1>Campus Life</h1>
+          <p>Explore our latest academy moments, practical sessions, events, and student activities.</p>
+        </div>
+        <div id="galleryFullGrid" class="gallery-grid gallery-full-grid" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Close gallery image"><i class="fa-solid fa-xmark"></i></button>
+    <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous gallery image"><i class="fa-solid fa-chevron-left"></i></button>
+    <figure><img src="" alt="Expanded gallery view" id="lightboxImage"><figcaption id="lightboxTitle"></figcaption></figure>
+    <button class="lightbox-nav lightbox-next" type="button" aria-label="Next gallery image"><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="js/runtime-config.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/config/endpoints.js"></script>
+  <script src="js/services/api-service.js"></script>
+  <script src="js/services/gallery-service.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>

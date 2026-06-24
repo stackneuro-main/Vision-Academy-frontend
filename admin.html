@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Admin Panel | Vision Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-page">
+  <section class="admin-login" id="loginView">
+    <form class="admin-login-card" id="loginForm">
+      <a class="admin-brand" href="index.html">
+        <span><i class="fa-solid fa-graduation-cap"></i></span>
+        <div><strong>Vision Academy</strong><small>Administration</small></div>
+      </a>
+      <div>
+        <span class="section-kicker">Secure access</span>
+        <h1>Welcome back</h1>
+        <p>Sign in to manage academy operations.</p>
+      </div>
+      <label>Email address<input type="email" name="email" autocomplete="username" required></label>
+      <label>Password<span class="password-field"><input type="password" name="password" autocomplete="current-password" minlength="8" required><button type="button" data-toggle-password aria-label="Show password" title="Show password"><i class="fa-solid fa-eye"></i></button></span></label>
+      <button class="btn btn-primary" type="submit"><i class="fa-solid fa-right-to-bracket"></i> Sign In</button>
+      <p class="admin-form-message" id="loginMessage" role="alert"></p>
+    </form>
+  </section>
+
+  <div class="admin-shell" id="adminShell" hidden>
+    <aside class="admin-sidebar" id="adminSidebar">
+      <a class="admin-brand" href="index.html">
+        <span><i class="fa-solid fa-graduation-cap"></i></span>
+        <div><strong>Vision Academy</strong><small>Admin Panel</small></div>
+      </a>
+      <nav aria-label="Admin navigation">
+        <button class="active" data-section="dashboard"><i class="fa-solid fa-chart-line"></i> Dashboard</button>
+        <span class="admin-nav-label"><i class="fa-solid fa-book-open"></i> Courses</span>
+        <button class="admin-subnav" data-section="categories"><i class="fa-solid fa-folder-tree"></i> Categories</button>
+        <button class="admin-subnav" data-section="courses"><i class="fa-solid fa-list-check"></i> Course</button>
+        <button data-section="teachers"><i class="fa-solid fa-chalkboard-user"></i> Teachers</button>
+        <button data-section="teams"><i class="fa-solid fa-people-group"></i> Teams</button>
+        <button data-section="gallery"><i class="fa-solid fa-images"></i> Gallery</button>
+        <button data-section="inquiries"><i class="fa-solid fa-message"></i> Inquiries</button>
+        <span class="admin-nav-label"><i class="fa-solid fa-gear"></i> Settings</span>
+        <button class="admin-subnav" data-section="profile-settings"><i class="fa-solid fa-user-gear"></i> Profile Settings</button>
+        <button class="admin-subnav" data-section="security-settings"><i class="fa-solid fa-shield-halved"></i> Security Settings</button>
+      </nav>
+      <a class="admin-site-link" href="index.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Website</a>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-topbar">
+        <button class="admin-menu" id="menuButton" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
+        <div><span id="pageEyebrow">Overview</span><h1 id="pageTitle">Dashboard</h1></div>
+        <div class="admin-profile-wrap">
+          <button class="admin-profile" id="profileMenuButton" type="button" aria-haspopup="menu" aria-expanded="false">
+            <span class="admin-profile-avatar" id="adminAvatar">VA</span>
+            <span class="admin-profile-copy"><strong id="adminName">Administrator</strong><small id="adminRole">Admin</small></span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="admin-profile-menu" id="profileMenu" role="menu" hidden>
+            <button type="button" data-profile-section="profile-settings"><i class="fa-solid fa-user"></i> My Profile</button>
+            <button type="button" data-profile-section="profile-settings"><i class="fa-solid fa-gear"></i> Settings</button>
+            <button type="button" data-profile-section="security-settings"><i class="fa-solid fa-key"></i> Change Password</button>
+            <button type="button" id="logoutButton"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+          </div>
+        </div>
+      </header>
+
+      <section class="admin-content">
+        <div id="toast" class="admin-toast" role="status"></div>
+        <div id="sectionContent" aria-live="polite"></div>
+      </section>
+    </main>
+  </div>
+
+  <dialog class="admin-modal" id="editorModal">
+    <form method="dialog" class="admin-modal-card" id="editorForm">
+      <header><div><span class="section-kicker" id="modalKicker">Manage</span><h2 id="modalTitle">Record</h2></div><button type="button" data-close-modal aria-label="Close"><i class="fa-solid fa-xmark"></i></button></header>
+      <div class="admin-form-grid" id="formFields"></div>
+      <p class="admin-form-message" id="formMessage" role="alert"></p>
+      <footer><button class="btn admin-btn-light" type="button" data-close-modal>Cancel</button><button class="btn btn-primary" type="submit"><i class="fa-solid fa-floppy-disk"></i> Save</button></footer>
+    </form>
+  </dialog>
+
+  <dialog class="admin-modal" id="detailsModal">
+    <article class="admin-modal-card">
+      <header><div><span class="section-kicker">Complete profile</span><h2 id="detailsTitle">Details</h2></div><button type="button" data-close-details aria-label="Close"><i class="fa-solid fa-xmark"></i></button></header>
+      <div class="admin-details" id="detailsContent"></div>
+      <footer><button class="btn admin-btn-light" type="button" data-close-details>Close</button></footer>
+    </article>
+  </dialog>
+
+  <script src="js/runtime-config.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/config/endpoints.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

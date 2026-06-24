@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Course details, curriculum, notes, videos, assessments, downloads, and student dashboard for Vision Academy programs.">
+  <meta name="keywords" content="course details, LMS, study materials, video lessons, online tests, student dashboard">
+  <meta name="author" content="Computer Education Institute">
+  <title>Course Details | Vision Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <a href="index.html#contact"><i class="fa-solid fa-location-dot"></i> 21 Knowledge Park, New Delhi</a>
+        <a href="tel:+7008445326"><i class="fa-solid fa-phone"></i> +91 70084 45326</a>
+        <a href="mailto:admissions@aicteinstitute.edu"><i class="fa-solid fa-envelope"></i> admissions@aicteinstitute.edu</a>
+      </div>
+      <div class="topbar-right">
+        <span><i class="fa-solid fa-award"></i> AICTE Approved Institute</span>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <nav class="container navbar" aria-label="Primary navigation">
+      <a class="logo" href="index.html#home" aria-label="Institute home">
+        <span class="logo-mark"><i class="fa-solid fa-shield-halved"></i></span>
+        <span class="logo-text">Vision Academy<small>Computer Education</small></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-menu" id="navMenu">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About Us</a>
+        <a href="index.html#courses">Courses</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <a class="btn btn-gold nav-cta" href="index.html#contact">Enquiry Now</a>
+    </nav>
+  </header>
+
+  <main class="course-detail-page" id="courseDetailPage">
+    <div id="courseDetailsApp"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="logo footer-logo" href="index.html#home">
+        <span class="logo-mark"><i class="fa-solid fa-shield-halved"></i></span>
+          <span class="logo-text">Vision Academy<small>Computer Education</small></span>
+        </a>
+        <p>Premium AICTE approved computer education institute focused on practical learning, career growth, and placement support.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div><h3>Quick Links</h3><a href="index.html#about">About Us</a><a href="index.html#courses">Courses</a><a href="index.html#gallery">Gallery</a><a href="index.html#contact">Contact</a></div>
+      <div><h3>Courses</h3><span id="footerCourseLinks"></span></div>
+      <div><h3>Useful Links</h3><a href="index.html#courses">Programs</a><a href="index.html#gallery">Campus Gallery</a><a href="index.html#contact">Contact</a><a href="index.html#contact">Enquiry</a></div>
+      <div><h3>Contact Details</h3><p>Rotary Chowk, Civil Township, Rourkela, Odisha</p><p>+91 70084 45326</p><p>admissions@aicteinstitute.edu</p></div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright &copy; 2026 Vision Academy Computer Education Institute. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="js/runtime-config.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/config/endpoints.js"></script>
+  <script src="js/services/api-service.js"></script>
+  <script src="js/services/course-service.js"></script>
+  <script src="js/services/category-service.js"></script>
+  <script src="js/services/inquiry-service.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/course-details.js"></script>
+</body>
+</html>

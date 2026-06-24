@@ -1,0 +1,650 @@
+@media (min-width: 1600px) {
+  .container {
+    width: min(1360px, calc(100% - 80px));
+  }
+
+  .hero-grid {
+    gap: 72px;
+  }
+
+  .hero {
+    min-height: 760px;
+  }
+
+  .course-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1200px) {
+  .team-showcase-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .nav-menu {
+    gap: 16px;
+    font-size: 0.88rem;
+  }
+
+  .nav-cta {
+    padding: 0 18px;
+  }
+
+  .hero-grid,
+  .about-grid,
+  .choose-grid {
+    gap: 42px;
+  }
+
+  .hero-content h1 {
+    font-size: 5rem;
+  }
+
+  .course-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .search-card {
+    grid-template-columns: 180px repeat(3, 1fr) 180px;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .topbar-inner {
+    justify-content: center;
+  }
+
+  .topbar-left {
+    justify-content: center;
+  }
+
+  .topbar-right {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 78px;
+    right: 24px;
+    left: 24px;
+    display: grid;
+    max-height: 0;
+    overflow: hidden;
+    gap: 0;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    transition: max-height 0.3s ease, border-color 0.3s ease;
+  }
+
+  .nav-menu.open {
+    max-height: 480px;
+    border-color: var(--line);
+  }
+
+  .nav-menu a {
+    padding: 15px 18px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav-menu a::after {
+    display: none;
+  }
+
+  .nav-toggle.open span:first-child {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .nav-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle.open span:last-child {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .hero {
+    padding-top: 64px;
+  }
+
+  .hero-grid,
+  .choose-grid,
+  .news-grid,
+  .contact-grid,
+  .lms-hero-grid,
+  .lms-overview-grid,
+  .lms-video-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    max-width: 760px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stats-card {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .stats-card div {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    border-right: 1px solid var(--line);
+    border-bottom: 0;
+  }
+
+  .stats-card div:last-child {
+    border-right: 0;
+  }
+
+  .hero-media {
+    min-height: auto;
+  }
+
+  .hero-media img {
+    height: 520px;
+  }
+
+  .aicte-certification-badge {
+    top: -144px;
+    right: 18px;
+  }
+
+  .hero-features {
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+  }
+
+  .search-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .search-title,
+  .search-card .btn {
+    grid-column: 1 / -1;
+  }
+
+  .course-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .course-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lms-card-grid,
+  .admin-layout,
+  .assessment-grid,
+  .dashboard-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .progress-panel {
+    grid-row: auto;
+  }
+
+  .choose-media img {
+    height: 430px;
+  }
+
+  .admission-banner {
+    min-height: 520px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-showcase-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .container {
+    width: min(100% - 32px, 1180px);
+  }
+
+  .section {
+    padding: 58px 0;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 4.15rem;
+  }
+
+  h2 {
+    font-size: 2.05rem;
+  }
+
+  .topbar {
+    display: none;
+  }
+
+  .navbar {
+    min-height: 70px;
+  }
+
+  .nav-menu {
+    top: 70px;
+    right: 16px;
+    left: 16px;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 58px 0 120px;
+  }
+
+  .hero-grid {
+    gap: 34px;
+  }
+
+  .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .hero-features,
+  .about-grid,
+  .search-card,
+  .check-list,
+  .course-grid,
+  .gallery-grid,
+  .admission-banner,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-card {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-card div {
+    grid-template-columns: 44px 1fr;
+    justify-items: stretch;
+    text-align: left;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .hero-media img,
+  .about-media img,
+  .choose-media img,
+  .lms-hero-media img {
+    height: 380px;
+  }
+
+  .aicte-certification-badge {
+    top: -126px;
+    right: 16px;
+    width: 112px;
+    height: 112px;
+    padding: 15px;
+  }
+
+  .aicte-certification-badge img {
+    width: 62px;
+    height: 62px;
+  }
+
+  .aicte-certification-badge span,
+  .aicte-certification-badge strong {
+    font-size: 0.52rem;
+  }
+
+  .achievement-card {
+    right: 14px;
+    bottom: 20px;
+    min-width: 184px;
+    padding: 14px 16px;
+  }
+
+  .achievement-card i {
+    width: 44px;
+    height: 44px;
+  }
+
+  .achievement-card strong {
+    font-size: 2rem;
+  }
+
+  .course-search {
+    margin-top: -54px;
+  }
+
+  .search-card {
+    padding: 18px;
+  }
+
+  .course-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .course-discovery-panel {
+    padding: 14px;
+  }
+
+  .course-filter-bar {
+    gap: 8px;
+  }
+
+  .course-filter-btn {
+    flex: 1 1 auto;
+    padding: 0 12px;
+  }
+
+  .course-card {
+    min-height: 330px;
+  }
+
+  .lms-hero {
+    padding: 58px 0 40px;
+  }
+
+  .lms-tabbar {
+    top: 78px;
+  }
+
+  .lms-card-grid,
+  .admin-layout,
+  .assessment-grid,
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lesson-list article,
+  .download-list article {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .choose {
+    width: min(100% - 32px, 1180px);
+    background:
+      linear-gradient(90deg, rgba(2, 10, 31, 0.98), rgba(8, 23, 64, 0.92)),
+      #06152c;
+  }
+
+  .choose-features {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item {
+    height: 250px;
+  }
+
+  .gallery-marquee .gallery-item {
+    width: 260px;
+    height: 170px;
+    flex-basis: 260px;
+  }
+
+  .gallery-skeleton-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lightbox {
+    padding: 20px 64px;
+  }
+
+  .lightbox figure {
+    max-width: calc(100vw - 128px);
+  }
+
+  .lightbox-prev {
+    left: 10px;
+  }
+
+  .lightbox-next {
+    right: 10px;
+  }
+
+  .admission-banner {
+    padding: 26px;
+  }
+
+  .admission-banner img {
+    height: 280px;
+  }
+
+  .contact-form,
+  .contact-details {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-showcase-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-showcase-modal-card {
+    padding: 20px;
+  }
+
+  .gallery-skeleton-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-full-grid .gallery-item {
+    height: 230px;
+  }
+
+  .lightbox {
+    padding: 72px 14px 76px;
+  }
+
+  .lightbox figure {
+    max-width: 100%;
+  }
+
+  .lightbox-nav {
+    top: auto;
+    bottom: 18px;
+    transform: none;
+  }
+
+  .lightbox-prev {
+    left: calc(50% - 58px);
+  }
+
+  .lightbox-next {
+    right: calc(50% - 58px);
+  }
+  .container {
+    width: min(100% - 24px, 1180px);
+  }
+
+  .choose {
+    width: min(100% - 24px, 1180px);
+  }
+
+  h1 {
+    font-size: 2.65rem;
+  }
+
+  .hero-content h1 {
+    font-size: 3.08rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .course-stats-grid,
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .course-stat-card {
+    min-height: 106px;
+    padding: 18px 18px 18px 76px;
+  }
+
+  .course-stat-card i {
+    top: 22px;
+    left: 18px;
+  }
+
+  .course-card {
+    min-height: auto;
+  }
+
+  .course-card-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .course-link {
+    width: 100%;
+  }
+
+  .lms-hero h1 {
+    font-size: 2.42rem;
+  }
+
+  .lms-hero-media img {
+    height: 300px;
+  }
+
+  .lms-floating-card {
+    position: static;
+    margin-top: 14px;
+  }
+
+  .lms-tabbar {
+    top: 70px;
+    padding: 10px;
+  }
+
+  .lms-tabbar button {
+    min-height: 38px;
+  }
+
+  .lms-panel {
+    padding: 20px;
+  }
+
+  .download-list article > div,
+  .lms-card-actions {
+    width: 100%;
+  }
+
+  .download-list .btn,
+  .lms-card-actions .btn {
+    flex: 1 1 120px;
+  }
+
+  .logo-text {
+    font-size: 1.2rem;
+  }
+
+  .logo-mark {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-media img,
+  .about-media img,
+  .choose-media img {
+    height: 310px;
+  }
+
+  .hero-features span {
+    white-space: normal;
+  }
+
+  .aicte-certification-badge {
+    top: -110px;
+    width: 94px;
+    height: 94px;
+    padding: 12px;
+  }
+
+  .aicte-certification-badge img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .aicte-certification-badge span,
+  .aicte-certification-badge strong {
+    font-size: 0.45rem;
+  }
+
+  .aicte-certification-badge span {
+    top: 9px;
+  }
+
+  .aicte-certification-badge strong {
+    bottom: 9px;
+  }
+
+  .achievement-card {
+    right: 8px;
+    min-width: 166px;
+    gap: 10px;
+  }
+
+  .achievement-card i {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+
+  .achievement-card strong {
+    font-size: 1.72rem;
+  }
+
+  .achievement-card span {
+    font-size: 0.72rem;
+  }
+
+  .play-tour {
+    right: 14px;
+    bottom: 14px;
+    padding: 12px;
+    font-size: 0.86rem;
+  }
+
+  .play-tour i {
+    width: 34px;
+    height: 34px;
+  }
+
+  .faq-item button {
+    padding: 18px;
+    font-size: 0.95rem;
+  }
+
+  .faq-item.active p {
+    padding: 0 18px 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-track {
+    animation-play-state: paused !important;
+  }
+}

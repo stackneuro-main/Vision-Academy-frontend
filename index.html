@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AICTE approved computer education institute offering admin-managed career, technology, professional, and academic programs.">
+  <meta name="keywords" content="AICTE approved computer institute, computer education, professional courses, career training, academic programs">
+  <meta name="author" content="Computer Education Institute">
+  <title>AICTE Approved Computer Education Institute</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <a href="#contact"><i class="fa-solid fa-location-dot"></i> 21 Knowledge Park, New Delhi</a>
+        <a href="tel:+7008445326"><i class="fa-solid fa-phone"></i> +91 70084 45326</a>
+        <a href="mailto:admissions@aicteinstitute.edu"><i class="fa-solid fa-envelope"></i> admissions@aicteinstitute.edu</a>
+      </div>
+      <div class="topbar-right">
+        <span><i class="fa-solid fa-award"></i> AICTE Approved Institute</span>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <nav class="container navbar" aria-label="Primary navigation">
+      <a class="logo" href="#home" aria-label="Institute home">
+        <span class="logo-mark"><i class="fa-solid fa-shield-halved"></i></span>
+        <span class="logo-text">Vision Academy<small>Computer Education</small></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-menu" id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#courses">Courses</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="btn btn-gold nav-cta" href="#contact">Enquiry Now</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="shape shape-one"></div>
+      <div class="shape shape-two"></div>
+      <div class="shape shape-three"></div>
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <span class="eyebrow"><i class="fa-solid fa-circle-check"></i> AICTE APPROVED INSTITUTE</span>
+          <h1>Learn Today.<br><span>Lead Tomorrow.</span></h1>
+          <p>Build a future-ready career with premium computer education, expert mentoring, practical labs, and industry-aligned programs designed for tomorrow's leaders.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="#courses"><i class="fa-solid fa-book-open"></i> Explore Courses</a>
+            <a class="btn btn-outline" href="#contact"><i class="fa-solid fa-message"></i> Enquire Now</a>
+          </div>
+          <div class="hero-features reveal delay-2">
+            <span><i class="fa-solid fa-award"></i> AICTE Approved</span>
+            <span><i class="fa-solid fa-chalkboard-user"></i> Expert Faculty</span>
+            <span><i class="fa-solid fa-briefcase"></i> Placement Assistance</span>
+            <span><i class="fa-solid fa-building-columns"></i> Modern Infrastructure</span>
+            <span><i class="fa-solid fa-laptop-code"></i> Practical Learning</span>
+            <span><i class="fa-solid fa-diagram-project"></i> Industry Curriculum</span>
+          </div>
+        </div>
+        <div class="hero-media reveal delay-1">
+          <span class="hero-circle circle-one" aria-hidden="true"></span>
+          <span class="hero-circle circle-two" aria-hidden="true"></span>
+          <span class="hero-circle circle-three" aria-hidden="true"></span>
+          <img class="hero-campus-image" src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1400&q=88" alt="Modern institute campus building">
+          <div class="aicte-certification-badge" aria-label="AICTE certification badge">
+            <span>AICTE</span>
+            <img src="images/aicte-logo.png" alt="AICTE official logo">
+            <strong>APPROVED</strong>
+          </div>
+          <div class="achievement-card">
+            <i class="fa-solid fa-trophy"></i>
+            <div>
+              <strong>15+</strong>
+              <span>Years of Excellence</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="course-search" aria-label="Course search">
+      <div class="container">
+        <form class="search-card reveal">
+          <div class="search-title">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <strong>Find Your<br>Perfect Course</strong>
+          </div>
+          <label>
+            <select id="courseSearchSelect" name="course_id" aria-label="Select course">
+              <option value="">Select Course</option>
+            </select>
+          </label>
+          <label>
+            <select id="courseCategorySelect" name="category_id" aria-label="Select category">
+              <option value="">All Categories</option>
+            </select>
+          </label>
+          <label>
+            <select id="courseDurationSelect" name="duration" aria-label="Select duration">
+              <option value="">All Durations</option>
+            </select>
+          </label>
+          <button class="btn btn-primary" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Search Course</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <div class="about-media reveal">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=85" alt="Students learning in a computer classroom">
+          <button class="play-tour" type="button" aria-label="Play virtual campus tour">
+            <i class="fa-solid fa-play"></i>
+            <span>Virtual Campus Tour</span>
+          </button>
+        </div>
+        <div class="about-content reveal delay-1">
+          <span class="section-kicker">About Vision Academy</span>
+          <h2>Empowering Students with Skills for a Better Tomorrow</h2>
+          <p>We deliver structured computer education with practical labs, career mentoring, live projects, and placement-oriented learning paths for students and working professionals.</p>
+          <ul class="check-list">
+            <li><i class="fa-solid fa-check"></i> Faculty Excellence</li>
+            <li><i class="fa-solid fa-check"></i> Industry Expert Trainers</li>
+            <li><i class="fa-solid fa-check"></i> Placement Support</li>
+            <li><i class="fa-solid fa-check"></i> Practical Learning</li>
+            <li><i class="fa-solid fa-check"></i> Live Projects</li>
+            <li><i class="fa-solid fa-check"></i> Certification Programs</li>
+          </ul>
+          <a class="btn btn-primary" href="#contact">Know More About Us</a>
+        </div>
+        <div class="stats-card reveal delay-2" id="statsCard">
+          <div><i class="fa-solid fa-book-open"></i><strong data-stat="total_courses" data-count="0">0</strong><span>Active Courses</span></div>
+          <div><i class="fa-solid fa-chalkboard-user"></i><strong data-stat="total_teachers" data-count="0">0</strong><span>Expert Teachers</span></div>
+          <div><i class="fa-solid fa-people-group"></i><strong data-stat="total_team_members" data-count="0">0</strong><span>Team Members</span></div>
+          <div><i class="fa-solid fa-award"></i><strong data-stat="placement_assistance" data-count="0">0</strong><span>Placement Assistance</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section team-showcase-section" aria-labelledby="teamShowcaseTitle">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">Faculty Excellence</span>
+          <h2 id="teamShowcaseTitle">Our Faculty &amp; Staff</h2>
+        </div>
+        <div id="teamShowcase" class="team-showcase-grid reveal" aria-live="polite"></div>
+        <div id="teamShowcaseActions" class="team-showcase-actions"></div>
+      </div>
+    </section>
+
+    <section class="section courses" id="courses">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">Career Programs</span>
+          <h2>Popular Courses</h2>
+        </div>
+        <div id="courseShowcase" class="course-showcase" aria-live="polite"></div>
+        <noscript>
+          <div class="course-empty-state"><p>Enable JavaScript to load current courses.</p></div>
+        </noscript>
+      </div>
+    </section>
+
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">Gallery</span>
+          <h2>Campus Life</h2>
+        </div>
+        <div id="galleryRows" class="gallery-moving-rows reveal" aria-live="polite"></div>
+        <div id="galleryActions" class="gallery-actions"></div>
+      </div>
+      <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox-close" type="button" aria-label="Close gallery image"><i class="fa-solid fa-xmark"></i></button>
+        <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous gallery image"><i class="fa-solid fa-chevron-left"></i></button>
+        <figure><img src="" alt="Expanded campus gallery view" id="lightboxImage"><figcaption id="lightboxTitle"></figcaption></figure>
+        <button class="lightbox-nav lightbox-next" type="button" aria-label="Next gallery image"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </section>
+
+    <section class="section faq">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">FAQ</span>
+          <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-list reveal">
+          <article class="faq-item active">
+            <button type="button">Is the institute AICTE approved?<i class="fa-solid fa-plus"></i></button>
+            <p>Yes, the institute operates as an AICTE approved computer education and training institute.</p>
+          </article>
+          <article class="faq-item">
+            <button type="button">Do you provide placement assistance?<i class="fa-solid fa-plus"></i></button>
+            <p>Yes, students receive resume guidance, interview preparation, recruiter connections, and placement drive support.</p>
+          </article>
+          <article class="faq-item">
+            <button type="button">What courses are available?<i class="fa-solid fa-plus"></i></button>
+            <p id="availableCoursesText">Current active programs are loaded from the academy course catalog.</p>
+          </article>
+          <article class="faq-item">
+            <button type="button">Are online classes available?<i class="fa-solid fa-plus"></i></button>
+            <p>Yes, selected programs are available in online, offline, and blended learning formats.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container contact-grid">
+        <form class="contact-form reveal">
+          <span class="section-kicker">Contact Us</span>
+          <h2>Send Your Enquiry</h2>
+          <input type="text" name="name" placeholder="Name" aria-label="Name" required>
+          <input type="email" name="email" placeholder="Email" aria-label="Email" required>
+          <input type="tel" name="phone" placeholder="Phone" aria-label="Phone" required>
+          <select id="inquiryCourseSelect" name="course_id" aria-label="Course interested">
+            <option value="">Course Interested</option>
+          </select>
+          <textarea name="message" placeholder="Message" aria-label="Message" rows="5"></textarea>
+          <button class="btn btn-gold" type="submit">Submit Enquiry</button>
+        </form>
+        <div class="contact-details reveal delay-1">
+          <span class="section-kicker">Visit Campus</span>
+          <h2>Contact Details</h2>
+          <div><i class="fa-solid fa-location-dot"></i><span><strong>Address</strong>Rotary Chowk, Civil Township, Rourkela, Odisha</span></div>
+          <div><i class="fa-solid fa-phone"></i><span><strong>Phone</strong>+91 70084 45326</span></div>
+          <div><i class="fa-solid fa-envelope"></i><span><strong>Email</strong>admissions@aicteinstitute.edu</span></div>
+          <div><i class="fa-solid fa-clock"></i><span><strong>Working Hours</strong>Mon - Sat, 9:00 AM - 6:00 PM</span></div>
+          <div class="map-placeholder">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <span>Google Map Placeholder</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="logo footer-logo" href="#home">
+        <span class="logo-mark"><i class="fa-solid fa-shield-halved"></i></span>
+          <span class="logo-text">Vision Academy<small>Computer Education</small></span>
+        </a>
+        <p>Premium AICTE approved computer education institute focused on practical learning, career growth, and placement support.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div><h3>Quick Links</h3><a href="#about">About Us</a><a href="#courses">Courses</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></div>
+      <div><h3>Courses</h3><span id="footerCourseLinks"></span></div>
+      <div><h3>Useful Links</h3><a href="#courses">Programs</a><a href="#gallery">Campus Gallery</a><a href="#contact">Contact</a><a href="#contact">Enquiry</a></div>
+      <div><h3>Contact Details</h3><p>Rotary Chowk, Civil Township, Rourkela, Odisha</p><p>+91 70084 45326</p><p>admissions@aicteinstitute.edu</p></div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright &copy; 2026 Vision Academy Computer Education Institute. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <dialog class="team-showcase-modal" id="teamShowcaseModal">
+    <article class="team-showcase-modal-card">
+      <header>
+        <div><span class="section-kicker">Faculty Excellence</span><h2>All Faculty &amp; Staff</h2></div>
+        <button type="button" data-close-team-modal aria-label="Close faculty and staff"><i class="fa-solid fa-xmark"></i></button>
+      </header>
+      <div id="teamShowcaseModalGrid" class="team-showcase-grid"></div>
+      <footer><button class="btn btn-primary" type="button" data-close-team-modal>Close</button></footer>
+    </article>
+  </dialog>
+
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="js/runtime-config.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/config/endpoints.js"></script>
+  <script src="js/services/api-service.js"></script>
+  <script src="js/services/course-service.js"></script>
+  <script src="js/services/category-service.js"></script>
+  <script src="js/services/inquiry-service.js"></script>
+  <script src="js/services/team-service.js"></script>
+  <script src="js/services/gallery-service.js"></script>
+  <script src="js/services/stats-service.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/course-showcase.js"></script>
+  <script src="js/team-showcase.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>
