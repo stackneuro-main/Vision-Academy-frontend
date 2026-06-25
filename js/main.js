@@ -105,17 +105,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const setHeaderState = () => {
     const scrolled = window.scrollY > 20;
-    header.classList.toggle("scrolled", scrolled);
-    backToTop.classList.toggle("show", window.scrollY > 520);
+    header?.classList.toggle("scrolled", scrolled);
+    backToTop?.classList.toggle("show", window.scrollY > 520);
   };
 
   setHeaderState();
   window.addEventListener("scroll", setHeaderState, { passive: true });
 
-  navToggle.addEventListener("click", () => {
+  navToggle?.addEventListener("click", () => {
     const open = navMenu.classList.toggle("open");
     navToggle.classList.toggle("open", open);
     navToggle.setAttribute("aria-expanded", String(open));
+    navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
   });
 
   navLinks.forEach((link) => {
@@ -123,12 +124,42 @@ document.addEventListener("DOMContentLoaded", () => {
       navMenu.classList.remove("open");
       navToggle.classList.remove("open");
       navToggle.setAttribute("aria-expanded", "false");
+      navToggle.setAttribute("aria-label", "Open menu");
     });
   });
 
-  backToTop.addEventListener("click", () => {
+  backToTop?.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
+
+  document.addEventListener("click", (event) => {
+    if (
+      !navMenu?.classList.contains("open")
+      || navMenu.contains(event.target)
+      || navToggle?.contains(event.target)
+    ) return;
+    navMenu.classList.remove("open");
+    navToggle?.classList.remove("open");
+    navToggle?.setAttribute("aria-expanded", "false");
+    navToggle?.setAttribute("aria-label", "Open menu");
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape" || !navMenu?.classList.contains("open")) return;
+    navMenu.classList.remove("open");
+    navToggle?.classList.remove("open");
+    navToggle?.setAttribute("aria-expanded", "false");
+    navToggle?.setAttribute("aria-label", "Open menu");
+    navToggle?.focus();
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth <= 1024) return;
+    navMenu?.classList.remove("open");
+    navToggle?.classList.remove("open");
+    navToggle?.setAttribute("aria-expanded", "false");
+    navToggle?.setAttribute("aria-label", "Open menu");
+  }, { passive: true });
 
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", (event) => {

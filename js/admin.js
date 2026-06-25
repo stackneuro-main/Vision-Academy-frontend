@@ -10,6 +10,10 @@
   const modal = $("#editorModal");
   const detailsModal = $("#detailsModal");
   const editorForm = $("#editorForm");
+  const sidebar = $("#adminSidebar");
+  const menuButton = $("#menuButton");
+  const sidebarCloseButton = $("#sidebarCloseButton");
+  const sidebarOverlay = $("#sidebarOverlay");
 
   const configs = {
     categories: {
@@ -262,7 +266,11 @@
     } catch { showLogin(); }
   }
 
-  function showLogin() { loginView.hidden = false; shell.hidden = true; }
+  function showLogin() {
+    setSidebar(false);
+    loginView.hidden = false;
+    shell.hidden = true;
+  }
   function showShell() {
     loginView.hidden = true; shell.hidden = false;
     updateAdminProfileUI();
@@ -330,10 +338,41 @@
   }));
   document.querySelectorAll("[data-close-modal]").forEach(button => button.addEventListener("click", () => modal.close()));
   document.querySelectorAll("[data-close-details]").forEach(button => button.addEventListener("click", () => detailsModal.close()));
-  $("#menuButton").addEventListener("click", () => $("#adminSidebar").classList.toggle("open"));
+  function setSidebar(open) {
+    const mobileLayout = window.matchMedia("(max-width: 1100px)").matches;
+    const shouldOpen = mobileLayout && open;
+    sidebar.classList.toggle("open", shouldOpen);
+    sidebarOverlay.classList.toggle("show", shouldOpen);
+    document.body.classList.toggle("admin-sidebar-open", shouldOpen);
+    menuButton.setAttribute("aria-expanded", String(shouldOpen));
+    menuButton.setAttribute(
+      "aria-label",
+      shouldOpen ? "Close navigation" : "Open navigation"
+    );
+  }
+
+  menuButton.addEventListener("click", () => {
+    setSidebar(!sidebar.classList.contains("open"));
+  });
+  sidebarCloseButton.addEventListener("click", () => {
+    setSidebar(false);
+    menuButton.focus();
+  });
+  sidebarOverlay.addEventListener("click", () => {
+    setSidebar(false);
+    menuButton.focus();
+  });
+  document.addEventListener("keydown", event => {
+    if (event.key !== "Escape" || !sidebar.classList.contains("open")) return;
+    setSidebar(false);
+    menuButton.focus();
+  });
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 1100) setSidebar(false);
+  }, { passive: true });
   document.querySelectorAll("[data-section]").forEach(button => button.addEventListener("click", () => {
     navigate(button.dataset.section);
-    $("#adminSidebar").classList.remove("open");
+    setSidebar(false);
   }));
 
   function navigate(section, openCreate = false) {

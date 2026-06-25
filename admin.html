@@ -33,6 +33,9 @@
 
   <div class="admin-shell" id="adminShell" hidden>
     <aside class="admin-sidebar" id="adminSidebar">
+      <button class="admin-sidebar-close" id="sidebarCloseButton" type="button" aria-label="Close navigation">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
       <a class="admin-brand" href="index.html">
         <span><i class="fa-solid fa-graduation-cap"></i></span>
         <div><strong>Vision Academy</strong><small>Admin Panel</small></div>
@@ -52,10 +55,11 @@
       </nav>
       <a class="admin-site-link" href="index.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Website</a>
     </aside>
+    <button class="admin-sidebar-overlay" id="sidebarOverlay" type="button" aria-label="Close navigation" tabindex="-1"></button>
 
     <main class="admin-main">
       <header class="admin-topbar">
-        <button class="admin-menu" id="menuButton" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
+        <button class="admin-menu" id="menuButton" type="button" aria-label="Open navigation" aria-controls="adminSidebar" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
         <div><span id="pageEyebrow">Overview</span><h1 id="pageTitle">Dashboard</h1></div>
         <div class="admin-profile-wrap">
           <button class="admin-profile" id="profileMenuButton" type="button" aria-haspopup="menu" aria-expanded="false">
