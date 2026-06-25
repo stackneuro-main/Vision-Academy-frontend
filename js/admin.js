@@ -611,7 +611,8 @@
     bindToolbar(config);
     if (openCreate) $("#addRecord")?.click();
     try {
-      const params = new URLSearchParams({ page: state.page, page_size: 15 });
+      // Keep every admin management table limited to five records per page.
+      const params = new URLSearchParams({ page: state.page, page_size: 5 });
       if (state.search) params.set("search", state.search);
       if (state.status) params.set("status", state.status);
       if (state.section === "teams" && state.department) params.set("department", state.department);
