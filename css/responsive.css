@@ -299,7 +299,7 @@
   .hero-media img,
   .about-media img,
   .choose-media img,
-  .lms-hero-media img {
+  .lms-hero-media > img {
     height: 380px;
   }
 
@@ -553,8 +553,9 @@
     font-size: 2.42rem;
   }
 
-  .lms-hero-media img {
-    height: 300px;
+  .lms-hero-media > img {
+    height: auto;
+    aspect-ratio: 4 / 3;
   }
 
   .lms-floating-card {
