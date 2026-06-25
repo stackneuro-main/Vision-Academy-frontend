@@ -200,9 +200,71 @@ p {
 .topbar {
   position: relative;
   z-index: 1001;
+  overflow: hidden;
   color: rgba(255, 255, 255, 0.86);
   background: #06152c;
   font-size: 0.76rem;
+}
+
+.topbar-marquee {
+  width: 100%;
+  overflow: hidden;
+}
+
+.topbar-track {
+  display: flex;
+  width: max-content;
+  animation: topbarMarquee 34s linear infinite;
+  will-change: transform;
+}
+
+.topbar-marquee:hover .topbar-track,
+.topbar-marquee:focus-within .topbar-track {
+  animation-play-state: paused;
+}
+
+.topbar-group {
+  display: flex;
+  min-height: 42px;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 28px;
+  padding: 0 28px;
+  white-space: nowrap;
+}
+
+.topbar-addresses {
+  gap: 9px !important;
+}
+
+.topbar-address-separator {
+  width: 1px;
+  height: 18px;
+  margin: 0 10px;
+  background: rgba(255, 255, 255, 0.38);
+}
+
+.topbar-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 17px !important;
+}
+
+.topbar-social a {
+  display: inline-grid;
+  width: 22px;
+  height: 28px;
+  place-items: center;
+}
+
+@keyframes topbarMarquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .topbar-inner,
@@ -377,7 +439,7 @@ p {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: minmax(0, 45%) minmax(0, 55%);
+  grid-template-columns: minmax(0, 42%) minmax(0, 58%);
   align-items: center;
   gap: 58px;
 }
@@ -461,7 +523,7 @@ p {
 
 .hero-media {
   position: relative;
-  min-height: 520px;
+  min-height: 590px;
   isolation: isolate;
 }
 
@@ -482,7 +544,7 @@ p {
   position: relative;
   z-index: 1;
   width: 100%;
-  height: 520px;
+  height: 590px;
   object-fit: cover;
   border-radius: 25px;
   box-shadow: 0 34px 95px rgba(0, 0, 0, 0.38), 0 0 0 1px rgba(255, 255, 255, 0.16);
@@ -524,67 +586,37 @@ p {
   animation-delay: 2.2s;
 }
 
-.aicte-certification-badge {
+.partner-logo-panel {
   position: absolute;
   top: -154px;
-  right: 30px;
+  right: 18px;
   z-index: 4;
   display: grid;
-  width: 130px;
-  height: 130px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: clamp(330px, 32vw, 440px);
+  gap: 22px;
+}
+
+.partner-logo-item {
+  display: grid;
+  min-width: 0;
+  min-height: 112px;
   place-items: center;
-  padding: 17px;
-  color: var(--navy);
-  border: 4px solid var(--gold);
-  border-radius: 50%;
-  background:
-    radial-gradient(circle, #ffffff 58%, #fff8dc 59%, #ffffff 72%),
-    #ffffff;
-  box-shadow: 0 24px 56px rgba(2, 17, 58, 0.3), 0 0 0 8px rgba(255, 193, 7, 0.15);
+  padding: 12px;
+  border: 2px solid rgba(255, 193, 7, 0.52);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 20px 46px rgba(2, 17, 58, 0.28), 0 0 0 6px rgba(255, 193, 7, 0.1);
+  backdrop-filter: blur(14px);
 }
 
-.aicte-certification-badge::before,
-.aicte-certification-badge::after {
-  position: absolute;
-  inset: 8px;
-  border: 1px solid rgba(255, 193, 7, 0.72);
-  border-radius: 50%;
-  content: "";
-}
-
-.aicte-certification-badge::after {
-  inset: 17px;
-  border-color: rgba(4, 27, 95, 0.16);
-}
-
-.aicte-certification-badge span,
-.aicte-certification-badge strong {
-  position: absolute;
-  z-index: 2;
-  color: #041b5f;
-  font-size: 0.62rem;
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: 0.1em;
-}
-
-.aicte-certification-badge span {
-  top: 13px;
-}
-
-.aicte-certification-badge strong {
-  bottom: 13px;
-}
-
-.aicte-certification-badge img {
-  position: relative;
-  z-index: 2;
-  width: 76px;
-  height: 76px;
+.hero-media .partner-logo-item img {
+  width: 100%;
+  height: auto;
+  max-height: 92px;
   object-fit: contain;
   border-radius: 0;
-  box-shadow: none;
-  filter: drop-shadow(0 8px 12px rgba(7, 27, 58, 0.14));
+  filter: drop-shadow(0 5px 8px rgba(7, 27, 58, 0.12));
 }
 
 .achievement-card {

@@ -155,12 +155,14 @@
   }
 
   .hero-media img {
-    height: 520px;
+    height: 560px;
   }
 
-  .aicte-certification-badge {
+  .partner-logo-panel {
     top: 18px;
     right: 18px;
+    width: min(440px, calc(100% - 36px));
+    gap: 18px;
   }
 
   .hero-features {
@@ -230,7 +232,18 @@
   }
 
   .topbar {
-    display: none;
+    display: block;
+    font-size: 0.7rem;
+  }
+
+  .topbar-group {
+    min-height: 38px;
+    gap: 22px;
+    padding: 0 22px;
+  }
+
+  .topbar-track {
+    animation-duration: 28s;
   }
 
   .navbar {
@@ -290,22 +303,25 @@
     height: 380px;
   }
 
-  .aicte-certification-badge {
+  .hero-media .hero-campus-image {
+    height: 460px;
+  }
+
+  .partner-logo-panel {
     top: 16px;
     right: 16px;
-    width: 112px;
-    height: 112px;
-    padding: 15px;
+    width: min(360px, calc(100% - 32px));
+    gap: 8px;
+    padding: 8px;
   }
 
-  .aicte-certification-badge img {
-    width: 62px;
-    height: 62px;
+  .partner-logo-item {
+    min-height: 92px;
+    padding: 9px;
   }
 
-  .aicte-certification-badge span,
-  .aicte-certification-badge strong {
-    font-size: 0.52rem;
+  .hero-media .partner-logo-item img {
+    max-height: 74px;
   }
 
   .achievement-card {
@@ -588,33 +604,30 @@
     height: 310px;
   }
 
+  .hero-media .hero-campus-image {
+    height: 390px;
+  }
+
   .hero-features span {
     white-space: normal;
   }
 
-  .aicte-certification-badge {
+  .partner-logo-panel {
     top: 14px;
-    width: 94px;
-    height: 94px;
-    padding: 12px;
+    right: 12px;
+    width: calc(100% - 24px);
+    gap: 12px;
   }
 
-  .aicte-certification-badge img {
-    width: 50px;
-    height: 50px;
+  .partner-logo-item {
+    min-height: 76px;
+    padding: 7px;
+    border-radius: 11px;
   }
 
-  .aicte-certification-badge span,
-  .aicte-certification-badge strong {
-    font-size: 0.45rem;
-  }
-
-  .aicte-certification-badge span {
-    top: 9px;
-  }
-
-  .aicte-certification-badge strong {
-    bottom: 9px;
+  .hero-media .partner-logo-item img {
+    height: auto;
+    max-height: 62px;
   }
 
   .achievement-card {
