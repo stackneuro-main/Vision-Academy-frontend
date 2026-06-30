@@ -354,6 +354,20 @@ p {
   letter-spacing: 0.04em;
 }
 
+.academy-logo {
+  align-self: center;
+  padding: 6px 0;
+  min-width: 0;
+}
+
+.academy-logo img {
+  display: block;
+  width: clamp(220px, 25vw, 315px);
+  height: auto;
+  aspect-ratio: 590 / 117;
+  object-fit: contain;
+}
+
 .nav-menu {
   display: flex;
   align-items: center;
@@ -2167,7 +2181,17 @@ p {
 }
 
 .footer-logo {
+  display: inline-flex;
+  width: fit-content;
   margin-bottom: 18px;
+}
+
+.footer-logo img {
+  display: block;
+  width: min(240px, 100%);
+  height: auto;
+  aspect-ratio: 590 / 117;
+  object-fit: contain;
 }
 
 .footer .logo-text {

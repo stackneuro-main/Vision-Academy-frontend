@@ -20,6 +20,10 @@
   .team-showcase-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+  .academy-logo img {
+    width: clamp(200px, 24vw, 285px);
+  }
+
   .nav-menu {
     gap: 16px;
     font-size: 0.88rem;
@@ -248,6 +252,14 @@
 
   .navbar {
     min-height: 70px;
+  }
+
+  .academy-logo {
+    max-width: calc(100% - 66px);
+  }
+
+  .academy-logo img {
+    width: clamp(180px, 46vw, 250px);
   }
 
   .nav-menu {
@@ -595,6 +607,14 @@
     height: 40px;
   }
 
+  .academy-logo {
+    padding: 5px 0;
+  }
+
+  .academy-logo img {
+    width: clamp(160px, 54vw, 220px);
+  }
+
   .hero-content p {
     font-size: 1rem;
   }
@@ -719,6 +739,14 @@
 
   .logo-text small {
     font-size: 0.48rem;
+  }
+
+  .academy-logo {
+    max-width: calc(100% - 58px);
+  }
+
+  .academy-logo img {
+    width: min(168px, 100%);
   }
 
   .nav-toggle {
